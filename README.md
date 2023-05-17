@@ -65,3 +65,20 @@ BloodLife provides a user-friendly interface for managing blood donations, inven
 - Inventory Management: Track blood units, their blood types, given amount, donated amount and quantity available.
 
 For detailed usage instructions and a comprehensive guide, refer to the user documentation.
+
+## Technologies Used
+
+- MongoDB - NoSQL database for storing data
+- Express - Backend framework for building RESTful APIs
+- React - Frontend framework for building user interfaces
+- Node.js - JavaScript runtime environment for building scalable server-side applications
+- JWT - JSON Web Token for user authentication and authorization
+- Bcrypt - Password hashing library for secure password storage
+
+## Conclusion
+
+BloodLife is a simple and effective blood donating and receiving system for the required people with multi-user roles consisting donor, hospital & organization. It allows organization to manage the donors for specific blood type and send it to the required hospital which it needs, and is designed to be user-friendly and intuitive. The system is built using modern web technologies and is easy to install and use.
+
+## Live Link
+
+The live project: [BloodLife](https://bloodlife.onrender.com)
