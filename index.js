@@ -2,7 +2,7 @@ const express = require('express');
 const colors = require("colors");
 const zxcvbn = require("zxcvbn");
 const app = express();
-const connectDb = require("./server/config/connectDb");
+const connectDb = require("./config/connectDb");
 const dotenv = require("dotenv");
 
 app.use(express.json());
