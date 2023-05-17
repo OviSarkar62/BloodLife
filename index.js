@@ -7,9 +7,9 @@ const dotenv = require("dotenv");
 
 app.use(express.json());
 
-const usersRoute = require("./server/routes/usersRoute");
-const inventoryRoute = require("./server/routes/inventoryRoute");
-const dashboardRoute = require("./server/routes/dashboardRoute");
+const usersRoute = require("./routes/usersRoute");
+const inventoryRoute = require("./routes/inventoryRoute");
+const dashboardRoute = require("./routes/dashboardRoute");
 
 app.use("/api/users", usersRoute);
 app.use("/api/inventory", inventoryRoute);
