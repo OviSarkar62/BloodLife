@@ -1,12 +1,11 @@
-import { Button, Table, message } from "antd";
+import { Table, message } from "antd";
 import React from "react";
 import { useDispatch } from "react-redux";
-import { GetInventory } from "../../../apicalls/inventory";
-import { SetLoading } from "../../../redux/loadersSlice";
-import { getDateFormat } from "../../../utils/helpers";
-import InventoryForm from "./InventoryForm";
+import { GetInventoryWithFilters } from "../apicalls/inventory";
+import { SetLoading } from "../redux/loadersSlice";
+import { getDateFormat } from "../utils/helpers";
 
-function Inventory() {
+function InventoryTable({ filters, userType, limit }) {
   const [data, setData] = React.useState([]);
   const [open, setOpen] = React.useState(false);
   const dispatch = useDispatch();
@@ -30,24 +29,38 @@ function Inventory() {
       title: "Reference",
       dataIndex: "reference",
       render: (text, record) => {
-        if (record.inventoryType === "in") {
-          return record.donor.name;
+        if (userType === "organization") {
+          return record.inventoryType === "in"
+            ? record.donor?.name
+            : record.hospital?.hospitalName;
         } else {
-          return record.hospital.hospitalName;
+          return record.organization.organizationName;
         }
       },
     },
     {
-      title: "Date & Time",
+      title: "Date",
       dataIndex: "createdAt",
-      render : (text) => getDateFormat(text)
+      render: (text) => getDateFormat(text),
     },
   ];
+
+  // change columns for hospital or donor
+  if (userType !== "organization") {
+    // remove inventory type column
+    columns.splice(0, 1);
+
+    // change reference column to organization name
+    columns[2].title = "Organization Name";
+
+    // date column should be renamed taken date
+    columns[3].title = userType === "hospital" ? "Received Date" : "Donated Date";
+  }
 
   const getData = async () => {
     try {
       dispatch(SetLoading(true));
-      const response = await GetInventory();
+      const response = await GetInventoryWithFilters(filters, limit);
       dispatch(SetLoading(false));
       if (response.success) {
         setData(response.data);
@@ -65,22 +78,9 @@ function Inventory() {
   }, []);
   return (
     <div>
-      <div className="flex justify-end">
-        <Button type="default" onClick={() => setOpen(true)}>
-          Add Inventory
-        </Button>
-      </div>
-
-      <Table columns={columns} dataSource={data} 
-       className="mt-3"
-      />
-
-      {open && <InventoryForm open={open} setOpen={setOpen} 
-      
-       reloadData={getData}
-      />}
+      <Table columns={columns} dataSource={data} className="mt-3" />
     </div>
   );
 }
 
-export default Inventory
+export default InventoryTable;

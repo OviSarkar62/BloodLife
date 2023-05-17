@@ -2,7 +2,7 @@ import { message } from "antd";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { GetLoggedInUserInfo } from "../apicalls/users";
+import { GetCurrentUser } from "../apicalls/users";
 import { SetLoading } from "../redux/loadersSlice";
 import { SetCurrentUser } from "../redux/usersSlice";
 import { getLoggedInUserName } from "../utils/helpers";
@@ -11,17 +11,15 @@ function ProtectedPage({ children }) {
   const { currentUser } = useSelector((state) => state.users);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
   const getCurrentUser = async () => {
     try {
       dispatch(SetLoading(true));
-      const response = await GetLoggedInUserInfo();
+      const response = await GetCurrentUser();
       dispatch(SetLoading(false));
       if (response.success) {
         message.success(response.message);
         dispatch(SetCurrentUser(response.data));
       } else {
-        dispatch(SetLoading(true));
         throw new Error(response.message);
       }
     } catch (error) {
@@ -51,6 +49,7 @@ function ProtectedPage({ children }) {
       window.removeEventListener("beforeunload", handleRefresh);
     };
   }, []);
+  
 
   return (
     currentUser && (
@@ -58,12 +57,12 @@ function ProtectedPage({ children }) {
         {/* header */}
         <div className="flex justify-between items-center bg-primary text-white px-5 py-3">
           <div onClick={() => navigate("/")} className="cursor-pointer">
-            <h1 className="text-4xl mb-2">BLOODLIFE</h1>
-            <span className="text-xs">{currentUser.userType.toUpperCase()}</span>
+            <h1 className="text-3xl mb-2">BLOODLIFE</h1>
+            <span className="text-2xs">{currentUser.userType.toUpperCase()}</span>
           </div>
 
           <div className="flex items-center gap-1">
-            <i class="ri-shield-user-line"></i>
+            <i className="ri-shield-user-line cursor-pointer" onClick={() => navigate("/profile")}></i>
             <div className="flex flex-col">
               <span
                 className="mr-5 text-md  cursor-pointer"

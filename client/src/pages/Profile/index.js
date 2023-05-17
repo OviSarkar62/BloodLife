@@ -1,10 +1,11 @@
 import { Tabs } from "antd";
 import React from "react";
 import { useSelector } from "react-redux";
-//import Donors from "./Donors";
-//import Hospitals from "./Hospitals";
+import InvetoryTable from "../../components/InventoryTable";
+import Donors from "./Donors";
+import Hospitals from "./Hospitals";
 import Inventory from "./Inventory/index";
-//import Organizations from "./Organizations";
+import Organizations from "./Organizations";
 
 function Profile() {
   const { currentUser } = useSelector((state) => state.users);
@@ -17,10 +18,44 @@ function Profile() {
               <Inventory />
             </Tabs.TabPane>
             <Tabs.TabPane tab="Donors" key="2">
-             
+              <Donors />
             </Tabs.TabPane>
             <Tabs.TabPane tab="Hospitals" key="3">
-              
+              <Hospitals />
+            </Tabs.TabPane>
+          </>
+        )}
+
+        {currentUser.userType === "donor" && (
+          <>
+            <Tabs.TabPane tab="Donations" key="4">
+              <InvetoryTable
+                filters={{
+                  inventoryType: "in",
+                  donor: currentUser._id,
+                }}
+                userType="donor"
+              />
+            </Tabs.TabPane>
+            <Tabs.TabPane tab="Organizations" key="5">
+              <Organizations userType="donor" />
+            </Tabs.TabPane>
+          </>
+        )}
+
+        {currentUser.userType === "hospital" && (
+          <>
+            <Tabs.TabPane tab="Consumptions" key="6">
+              <InvetoryTable
+                filters={{
+                  inventoryType: "out",
+                  hospital: currentUser._id,
+                }}
+                userType="hospital"
+              />
+            </Tabs.TabPane>
+            <Tabs.TabPane tab="Organizations" key="7">
+              <Organizations userType="hospital" />
             </Tabs.TabPane>
           </>
         )}

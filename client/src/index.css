@@ -24,6 +24,9 @@ input:focus {
 .ant-form-item {
   margin-bottom: 0 !important;
 }
+.ant-form-item-label {
+  padding: 0 !important;
+}
 a:hover {
   text-decoration: underline !important;
   color: #6a6a6a !important;
@@ -31,7 +34,7 @@ a:hover {
 
 i {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* overring antd button styles */
@@ -39,4 +42,23 @@ button {
   border-radius: 5px !important;
   box-shadow: none !important;
   height: 35px !important;
+}
+
+input,
+textarea,
+select {
+  min-height: 40px !important;
+  border: 1px solid #6a6a6a !important;
+  border-radius: 5px !important;
+  width: 100% !important;
+}
+
+input:focus,
+textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+table {
+  border: 1px solid #6a6a6a !important;
+  border-radius: 5px !important;
 }
