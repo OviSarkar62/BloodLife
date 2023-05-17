@@ -81,4 +81,4 @@ BloodLife is a simple and effective blood donating and receiving system for the 
 
 ## Live Link
 
-The live project: [BloodLife](https://bloodlife.onrender.com)
+The live project: [BloodLife](https://blood-life-ovisarkar62.vercel.app/login)
