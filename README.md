@@ -34,9 +34,9 @@ To set up BloodLife locally, follow these steps:
     
 - Create a .env file in the root directory with the following environment variables:
 
-1. MONGO_URI: The connection string for MongoDB. If using MongoDB Atlas, you can find this in the cluster details.
+1. DB_URL: The connection string for MongoDB. If using MongoDB Atlas, you can find this in the cluster details.
 
-2. SALT_ROUNDS: A salt value.
+2. JWT_SECRET: A secret value.
 
 - Start the server: 
 
@@ -50,4 +50,4 @@ To set up BloodLife locally, follow these steps:
 
        npm start
     
-Open http://localhost:3000 in your browser to access the application.
+- Access the application. Open your web browser and visit http://localhost:3000 to access the BloodLife application.
