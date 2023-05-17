@@ -51,3 +51,17 @@ To set up BloodLife locally, follow these steps:
        npm start
     
 - Access the application. Open your web browser and visit http://localhost:3000 to access the BloodLife application.
+
+## Usage
+
+BloodLife provides a user-friendly interface for managing blood donations, inventory, and donor information. Here are some guidelines on using the application:
+
+- Donor Registration: Blood donors can register themselves by providing their personal details, address and contact information.
+
+- Hospital Registration: Hospitals which receive can register themselves by providing their hospital details, address and contact information.
+
+- Organization Registration: Different bloodbanks can register themselves by providing their organization details, address and contact information.
+
+- Inventory Management: Track blood units, their blood types, given amount, donated amount and quantity available.
+
+For detailed usage instructions and a comprehensive guide, refer to the user documentation.
