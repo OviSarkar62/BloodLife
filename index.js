@@ -2,14 +2,14 @@ const express = require('express');
 const colors = require("colors");
 const zxcvbn = require("zxcvbn");
 const app = express();
-const connectDb = require("./config/connectDb");
+const connectDb = require("./server/config/connectDb");
 const dotenv = require("dotenv");
 
 app.use(express.json());
 
-const usersRoute = require("./routes/usersRoute");
-const inventoryRoute = require("./routes/inventoryRoute");
-const dashboardRoute = require("./routes/dashboardRoute");
+const usersRoute = require("./server/routes/usersRoute");
+const inventoryRoute = require("./server/routes/inventoryRoute");
+const dashboardRoute = require("./server/routes/dashboardRoute");
 
 app.use("/api/users", usersRoute);
 app.use("/api/inventory", inventoryRoute);
