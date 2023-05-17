@@ -18,6 +18,7 @@ function Login() {
         ...values,
         userType: type,
       });
+      window.location.reload();
       dispatch(SetLoading(false))
       if (response.success) {
         message.success(response.message);
