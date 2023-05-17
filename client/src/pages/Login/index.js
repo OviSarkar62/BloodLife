@@ -14,7 +14,6 @@ function Login() {
   const onFinish = async (values) => {
     try {
       dispatch(SetLoading(true))
-      //window.location.reload();
       const response = await LoginUser({
         ...values,
         userType: type,
@@ -38,7 +37,9 @@ function Login() {
     if (localStorage.getItem("token")) {
       navigate("/");
     }
-  }, []);
+  }, [navigate]);
+  
+  
 
   return (
     <div className="flex h-screen items-center justify-center bg-primary">

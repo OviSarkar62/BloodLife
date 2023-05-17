@@ -96,7 +96,7 @@ router.get("/get-current-user", authMiddleware, async (req, res) => {
     const user = await User.findOne({ _id: req.body.userId });
     return res.send({
       success: true,
-      //message: "User Fetched Successfully",
+      message: "User Fetched Successfully",
       data: user,
     });
   } catch (error) {
@@ -122,7 +122,7 @@ router.get("/get-all-donors", authMiddleware, async (req, res) => {
 
     return res.send({
       success: true,
-     // message: "Donors Fetched Successfully",
+      message: "Donors Fetched Successfully",
       data: donors,
     });
   } catch (error) {
@@ -148,7 +148,7 @@ router.get("/get-all-hospitals", authMiddleware, async (req, res) => {
 
     return res.send({
       success: true,
-      //message: "Hospitals Fetched Successfully",
+      message: "Hospitals Fetched Successfully",
       data: hospitals,
     });
   } catch (error) {
@@ -174,7 +174,7 @@ router.get("/get-all-organizations-of-a-donor", authMiddleware, async (req, res)
 
       return res.send({
         success: true,
-        //message: "Hospitals Fetched Successfully",
+        message: "Hospitals Fetched Successfully",
         data: hospitals,
       });
     } catch (error) {
@@ -200,7 +200,7 @@ router.get("/get-all-organizations-of-a-hospital", authMiddleware, async (req, r
 
       return res.send({
         success: true,
-        //message: "Hospitals Fetched Successfully",
+        message: "Hospitals Fetched Successfully",
         data: hospitals,
       });
     } catch (error) {
