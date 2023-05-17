@@ -14,11 +14,12 @@ function Login() {
   const onFinish = async (values) => {
     try {
       dispatch(SetLoading(true))
-      window.location.reload();
+      //window.location.reload();
       const response = await LoginUser({
         ...values,
         userType: type,
       });
+      window.location.reload();
       dispatch(SetLoading(false))
       if (response.success) {
         message.success(response.message);
