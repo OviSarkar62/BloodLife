@@ -6,11 +6,11 @@ BloodLife is an open-source project aimed at creating a web application for bloo
 
 BloodLife offers the following key features:
 
-Donor Management: Maintain a database of blood donors, including their personal information, contact details, blood type, and donation history.
+1. Donor Management: Maintain a database of blood donors, including their personal information, contact details, blood type, and donation history.
 
-Inventory Tracking: Keep track of blood units, their blood types, and quantity available.
+2. Inventory Tracking: Keep track of blood units, their blood types, and quantity available.
 
-Reports and Analytics: Generate reports and analytics related to blood donations, inventory, and other relevant records.
+3. Reports and Analytics: Generate reports and analytics related to blood donations, inventory, and other relevant records.
 
 ## Installation
 
@@ -30,7 +30,7 @@ To set up BloodLife locally, follow these steps:
     
 - Install the dependencies for the client: 
 
-       npm i react-router-dom redux react-redux axios antd @reduxjs/toolkit @fortawesome/react-fontawesome react-bootstrap moment
+       npm i react-router-dom redux react-redux axios antd @reduxjs/toolkit react-bootstrap moment
     
 - Create a .env file in the root directory with the following environment variables:
 
