@@ -6,11 +6,11 @@ BloodLife is an open-source project aimed at creating a web application for bloo
 
 BloodLife offers the following key features:
 
-1. Donor Management: Maintain a database of blood donors, including their personal information, contact details, blood type, and donation history.
+- Donor Management: Maintain a database of blood donors, including their personal information, contact details, blood type, and donation history.
 
-2. Inventory Tracking: Keep track of blood units, their blood types, and quantity available.
+- Inventory Tracking: Keep track of blood units, their blood types, and quantity available.
 
-3. Reports and Analytics: Generate reports and analytics related to blood donations, inventory, and other relevant records.
+- Reports and Analytics: Generate reports and analytics related to blood donations, inventory, and other relevant records.
 
 ## Installation
 
@@ -34,9 +34,9 @@ To set up BloodLife locally, follow these steps:
     
 - Create a .env file in the root directory with the following environment variables:
 
-1. DB_URL: The connection string for MongoDB. If using MongoDB Atlas, you can find this in the cluster details.
+`DB_URL: The connection string for MongoDB. If using MongoDB Atlas, you can find this in the cluster details`
 
-2. JWT_SECRET: A secret value.
+`JWT_SECRET: A secret value`
 
 - Start the server: 
 
