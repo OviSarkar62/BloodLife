@@ -34,9 +34,9 @@ To set up BloodLife locally, follow these steps:
     
 - Create a .env file in the root directory with the following environment variables:
 
-       DB_URL: DB_URL = mongodb+srv://<user>:<pass>@cluster0.l17quyr.mongodb.net/database
+       DB_URL = mongodb+srv://<user>:<pass>@cluster0.l17quyr.mongodb.net/database
 
-       JWT_SECRET: A secret value
+       JWT_SECRET = A_Secret_Value
 
 - Start the server: 
 
