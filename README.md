@@ -36,7 +36,7 @@ BloodLife is an open-source project aimed at creating a web application for bloo
   <img alt="img-name" src="Images/Org History Checking of Donor.png" width="700">
 </p>
  
-<h4>1. For Hospital Profile<h4/>
+<h4>2. For Hospital Profile<h4/>
  
 - **Registration**
 <p align="center">
@@ -66,6 +66,48 @@ BloodLife is an open-source project aimed at creating a web application for bloo
 - **Checking History**
 <p align="center">
   <img alt="img-name" src="Images/History of Org of Hospital.png" width="700">
+</p>
+ 
+<h4>3. For Organization Profile<h4/>
+ 
+- **Registration**
+<p align="center">
+  <img alt="img-name" src="Images/Organization Reg.png" width="700">
+</p>
+      
+- **Login**
+<p align="center">
+  <img alt="img-name" src="Images/Organization Login.png" width="700">
+</p>
+ 
+- **Homepage**
+<p align="center">
+  <img alt="img-name" src="Images/Homepage of Org.png" width="700">
+</p>
+ 
+- **Inventory**
+<p align="center">
+  <img alt="img-name" src="Images/Inventory in pro of Org.png" width="700">
+</p>
+ 
+- **Donors**
+<p align="center">
+  <img alt="img-name" src="Images/Donors in pro of org.png" width="700">
+</p>
+ 
+- **Hospitals**
+<p align="center">
+  <img alt="img-name" src="Images/Hospitals in pro of Org.png" width="700">
+</p>
+ 
+- **Add Inventory (Blood From Donor)**
+<p align="center">
+  <img alt="img-name" src="Images/Add Inventory from donor by Org.png" width="700">
+</p>
+ 
+- **Add Inventory (Blood To Hospital)**
+<p align="center">
+  <img alt="img-name" src="Images/Add inventory to hospital by organization.png" width="700">
 </p>
  
 ## Features
