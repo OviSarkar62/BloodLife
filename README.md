@@ -2,6 +2,15 @@
 
 BloodLife is an open-source project aimed at creating a web application for blood banks, and hospitals to manage and track blood donations, inventory, and donor information. This documentation provides an overview of the project, its features, and installation instructions.
 
+## Project View
+
+<h4>1. For User Profile<h4/>
+ 
+- **Homepage**
+<p align="center">
+  <img alt="img-name" src="Images/Homepage from User.png" width="700">
+</p>
+      
 ## Features
 
 BloodLife offers the following key features:
