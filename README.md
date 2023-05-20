@@ -4,13 +4,38 @@ BloodLife is an open-source project aimed at creating a web application for bloo
 
 ## Project View
 
-<h4>1. For User Profile<h4/>
+<h4>1. For Donor Profile<h4/>
+ 
+- **Registration**
+<p align="center">
+  <img alt="img-name" src="Images/Donor Registration.png" width="700">
+</p>
+      
+- **Login**
+<p align="center">
+  <img alt="img-name" src="Images/Donor Login.png" width="700">
+</p>
  
 - **Homepage**
 <p align="center">
-  <img alt="img-name" src="Images/Homepage from User.png" width="700">
+  <img alt="img-name" src="Images/Donor Homepage.png" width="700">
 </p>
-      
+ 
+- **Donations**
+<p align="center">
+  <img alt="img-name" src="Images/Donations in Profile Page of Donor.png" width="700">
+</p>
+ 
+- **Organizations**
+<p align="center">
+  <img alt="img-name" src="Images/Org in profile page of Donor.png" width="700">
+</p>
+ 
+- **Checking History**
+<p align="center">
+  <img alt="img-name" src="Images/Org History Checking of Donor.png" width="700">
+</p>
+ 
 ## Features
 
 BloodLife offers the following key features:
