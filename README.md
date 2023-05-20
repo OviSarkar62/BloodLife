@@ -174,7 +174,7 @@ BloodLife provides a user-friendly interface for managing blood donations, inven
 
 For detailed usage instructions and a comprehensive guide, refer to the user documentation.
 
-## Technologies Used
+## Stack
 
 - MongoDB - NoSQL database for storing data
 - Express - Backend framework for building RESTful APIs
